@@ -1,0 +1,39 @@
+.website-logo-header {
+  height: 30px;
+  margin-left: 40px;
+}
+li {
+  list-style-type: none;
+}
+.log-out-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+}
+.theme-button {
+  border-width: 0px;
+  background-color: transparent;
+}
+.moon {
+  color: black;
+  font-size: 30px;
+}
+.sun {
+  color: white;
+  font-size: 30px;
+}
+.profile {
+  height: 30px;
+}
+.logout-button {
+  height: 30px;
+  width: 70px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3b82f6;
+  color: #3b82f6;
+  background-color: transparent;
+}
