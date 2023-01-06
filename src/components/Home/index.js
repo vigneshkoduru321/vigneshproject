@@ -144,7 +144,7 @@ class Home extends Component {
                             className="cross-button"
                             onClick={this.closeBanner}
                           >
-                            <AiOutlineClose className="logos" />
+                            <AiOutlineClose className="close" />
                           </button>
                         </div>
                       </div>
@@ -163,7 +163,7 @@ class Home extends Component {
                       </button>
                     </div>
                   </div>
-                  <div className="head-con">{this.renderItem()}</div>
+                  <div className="videos">{this.renderItem()}</div>
                 </div>
               </div>
             </DivMainHome>

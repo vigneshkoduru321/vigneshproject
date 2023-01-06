@@ -42,6 +42,7 @@
   background-color: transparent;
   border-width: 1px;
   border-style: solid;
+  font-family: 'Roboto';
 }
 .login-button {
   border-width: 0px;

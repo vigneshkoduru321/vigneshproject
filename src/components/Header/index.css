@@ -37,3 +37,23 @@ li {
   color: #3b82f6;
   background-color: transparent;
 }
+@media (max-width: 576px) {
+  .website-logo-header {
+    height: 30px;
+    margin-left: 20px;
+  }
+  .moon {
+    color: black;
+    font-size: 25px;
+  }
+  .sun {
+    color: white;
+    font-size: 25px;
+  }
+  .profile {
+    height: 25px;
+  }
+  .log-out-container {
+    width: 170px;
+  }
+}

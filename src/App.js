@@ -9,16 +9,27 @@ import ProtectedRoute from './components/ProtectedRoute'
 
 // Replace your code here
 class App extends Component {
-  state = {islight: true}
+  state = {islight: true, selectedLink: 'home'}
 
   changeTheme = () => {
     this.setState(prevState => ({islight: !prevState.islight}))
   }
 
+  changeSelectedLink = value => {
+    this.setState({selectedLink: value})
+  }
+
   render() {
-    const {islight} = this.state
+    const {islight, selectedLink} = this.state
     return (
-      <ContextTheme.Provider value={{islight, changeTheme: this.changeTheme}}>
+      <ContextTheme.Provider
+        value={{
+          islight,
+          selectedLink,
+          changeTheme: this.changeTheme,
+          changeSelectedLink: this.changeSelectedLink,
+        }}
+      >
         <Switch>
           <Route exact path="/login" component={Login} />
           <ProtectedRoute exact path="/" component={Home} />
