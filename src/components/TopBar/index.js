@@ -15,7 +15,6 @@ class TopBar extends Component {
       <ContextTheme.Consumer>
         {value => {
           const {islight, selectedLink, changeSelectedLink} = value
-          console.log(selectedLink)
           const onClickHome = () => {
             changeSelectedLink('home')
           }
@@ -53,7 +52,7 @@ class TopBar extends Component {
                 onClick={onClickTrending}
                 className="link"
                 style={{textDecoration: 'none'}}
-                to="/"
+                to="/trending"
               >
                 <AiFillFire className="top-link-img" />
                 <LinkText
@@ -68,7 +67,7 @@ class TopBar extends Component {
                 onClick={onClickGaming}
                 className="link"
                 style={{textDecoration: 'none'}}
-                to="/"
+                to="/gaming"
               >
                 <IoLogoGameControllerB className="top-link-img" />
                 <LinkText
@@ -83,7 +82,7 @@ class TopBar extends Component {
                 onClick={onClickSaved}
                 className="link"
                 style={{textDecoration: 'none'}}
-                to="/"
+                to="/saved-videos"
               >
                 <FaSave className="top-link-img" />
                 <LinkText

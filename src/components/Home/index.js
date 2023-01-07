@@ -163,7 +163,7 @@ class Home extends Component {
                       </button>
                     </div>
                   </div>
-                  <div className="videos">{this.renderItem()}</div>
+                  <div className="render-item-con">{this.renderItem()}</div>
                 </div>
               </div>
             </DivMainHome>

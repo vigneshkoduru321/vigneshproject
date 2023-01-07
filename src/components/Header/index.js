@@ -21,14 +21,17 @@ class Header extends Component {
     return (
       <ContextTheme.Consumer>
         {value => {
-          const {islight, changeTheme} = value
+          const {islight, changeTheme, changeSelectedLink} = value
           const onChangeTheme = () => {
             changeTheme()
+          }
+          const onClickHomeImg = () => {
+            changeSelectedLink('home')
           }
           return (
             <NavHeader islight={islight}>
               <li>
-                <Link to="/">
+                <Link onClick={onClickHomeImg} to="/">
                   <img
                     src={
                       islight

@@ -1,0 +1,43 @@
+.trend-card-con {
+  width: 800px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.trending-thumbnailUrl-img {
+  height: 200px;
+  width: 300px;
+}
+.content-trends-con {
+  margin-left: 20px;
+}
+.views-con-trends {
+  display: flex;
+  justify-content: flex-start;
+  width: 200px;
+}
+@media (max-width: 576px) {
+  .trending-thumbnailUrl-img {
+    height: 200px;
+    width: 300px;
+  }
+  .title-trends {
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .para-trends {
+    font-size: 10px;
+    font-weight: 400;
+  }
+  .trend-card-con {
+    width: 300px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 50px;
+  }
+}

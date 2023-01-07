@@ -1,0 +1,45 @@
+.content-container-gaming {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.head-logo {
+  color: red;
+  font-size: 40px;
+  margin-right: 20px;
+}
+.head-container {
+  width: 100%;
+}
+.logo-con-head {
+  width: 60px;
+}
+.renderItem-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+}
+.videos-cards {
+  overflow: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (max-width: 576px) {
+  .head-container {
+    display: none;
+  }
+  .videos-cards {
+    margin-right: 40px;
+  }
+}

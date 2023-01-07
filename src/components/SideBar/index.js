@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import './index.css'
 
 import {Component} from 'react'
@@ -41,7 +41,7 @@ class SideBar extends Component {
                 >
                   <FaHome className="link-logo" />
                   <LinkName
-                    selectedLink={selectedLink}
+                    selected={selectedLink}
                     value="home"
                     islight={islight}
                   >
@@ -53,11 +53,11 @@ class SideBar extends Component {
                   onClick={onClickTrending}
                   className="link-con"
                   style={{textDecoration: 'none'}}
-                  to="/"
+                  to="/trending"
                 >
                   <AiFillFire className="link-logo" />
                   <LinkName
-                    selectedLink={selectedLink}
+                    selected={selectedLink}
                     value="trending"
                     islight={islight}
                   >
@@ -69,11 +69,11 @@ class SideBar extends Component {
                   onClick={onClickGaming}
                   className="link-con"
                   style={{textDecoration: 'none'}}
-                  to="/"
+                  to="/gaming"
                 >
                   <IoLogoGameControllerB className="link-logo" />
                   <LinkName
-                    selectedLink={selectedLink}
+                    selected={selectedLink}
                     value="gaming"
                     islight={islight}
                   >
@@ -85,11 +85,11 @@ class SideBar extends Component {
                   onClick={onClickSaved}
                   className="link-con"
                   style={{textDecoration: 'none'}}
-                  to="/"
+                  to="/saved-videos"
                 >
                   <FaSave className="link-logo" />
                   <LinkName
-                    selectedLink={selectedLink}
+                    selected={selectedLink}
                     value="saved"
                     islight={islight}
                   >
@@ -126,4 +126,4 @@ class SideBar extends Component {
   }
 }
 
-export default SideBar
+export default withRouter(SideBar)
