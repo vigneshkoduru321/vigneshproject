@@ -14,8 +14,8 @@ const VideoCard = props => {
       {value => {
         const {islight} = value
         return (
-          <Link style={{textDecoration: 'none'}} to="/">
-            <li className="video-card">
+          <li className="video-card">
+            <Link style={{textDecoration: 'none'}} to={`/videos/${id}`}>
               <img src={thumbnailUrl} alt="" className="thumbnailUrl" />
               <div className="video-card-container">
                 <img src={profileImageUrl} alt="" className="profileImageUrl" />
@@ -29,8 +29,8 @@ const VideoCard = props => {
                   </div>
                 </div>
               </div>
-            </li>
-          </Link>
+            </Link>
+          </li>
         )
       }}
     </ContextTheme.Consumer>

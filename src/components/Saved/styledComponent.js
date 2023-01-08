@@ -17,3 +17,23 @@ export const HeadContainer = styled.div`
   align-items: center;
   padding-left: 30px;
 `
+export const SavedListCon = styled.div`
+  background-color: ${props => (props.islight ? 'white' : 'black')};
+  height: 80vh;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+`
+export const TitleNoSaved = styled.h1`
+  color: ${props => (props.islight ? 'black' : 'white')};
+  font-size: 25px;
+  font-weight: 600;
+`
+export const ParaNoSaved = styled.h1`
+  color: ${props => (props.islight ? 'black' : 'white')};
+  font-size: 15px;
+  font-weight: 400;
+`

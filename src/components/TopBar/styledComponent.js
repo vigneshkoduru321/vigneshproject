@@ -5,7 +5,7 @@ export const LinkText = styled.p`
   font-weight: 600;
   font-family: 'Roboto';
   font-family: 'Roboto';
-  color: ${props => (props.selectedLink === props.values ? 'red' : '#616e7c')};
-  opacity: ${props => (props.selectedLink === props.values ? '1' : '0.5')};
+  color: ${props => (props.valuePath === props.path ? 'red' : '#616e7c')};
+  opacity: ${props => (props.valuePath === props.path ? '1' : '0.5')};
 `
 export default LinkText

@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import {Component} from 'react'
 import {FaHome, FaSave} from 'react-icons/fa'
 import {AiFillFire} from 'react-icons/ai'
@@ -14,34 +14,17 @@ class TopBar extends Component {
     return (
       <ContextTheme.Consumer>
         {value => {
-          const {islight, selectedLink, changeSelectedLink} = value
-          const onClickHome = () => {
-            changeSelectedLink('home')
-          }
-
-          const onClickTrending = () => {
-            changeSelectedLink('trending')
-          }
-
-          const onClickGaming = () => {
-            changeSelectedLink('gaming')
-          }
-
-          const onClickSaved = () => {
-            changeSelectedLink('saved')
-          }
+          const {islight} = value
+          const {match} = this.props
+          const {path} = match
           return (
             <div className="top-links-container">
-              <Link
-                onClick={onClickHome}
-                className="link"
-                style={{textDecoration: 'none'}}
-                to="/"
-              >
+              <Link className="link" style={{textDecoration: 'none'}} to="/">
                 <FaHome className="top-link-img" />
                 <LinkText
                   values="home"
-                  selectedLink={selectedLink}
+                  path={path}
+                  valuePath="/"
                   islight={islight}
                 >
                   Home
@@ -49,7 +32,6 @@ class TopBar extends Component {
               </Link>
 
               <Link
-                onClick={onClickTrending}
                 className="link"
                 style={{textDecoration: 'none'}}
                 to="/trending"
@@ -57,14 +39,14 @@ class TopBar extends Component {
                 <AiFillFire className="top-link-img" />
                 <LinkText
                   values="trending"
-                  selectedLink={selectedLink}
+                  path={path}
+                  valuePath="/trending"
                   islight={islight}
                 >
                   Trending
                 </LinkText>
               </Link>
               <Link
-                onClick={onClickGaming}
                 className="link"
                 style={{textDecoration: 'none'}}
                 to="/gaming"
@@ -72,14 +54,14 @@ class TopBar extends Component {
                 <IoLogoGameControllerB className="top-link-img" />
                 <LinkText
                   values="gaming"
-                  selectedLink={selectedLink}
+                  path={path}
+                  valuePath="/gaming"
                   islight={islight}
                 >
                   Gaming
                 </LinkText>
               </Link>
               <Link
-                onClick={onClickSaved}
                 className="link"
                 style={{textDecoration: 'none'}}
                 to="/saved-videos"
@@ -87,7 +69,8 @@ class TopBar extends Component {
                 <FaSave className="top-link-img" />
                 <LinkText
                   values="saved"
-                  selectedLink={selectedLink}
+                  path={path}
+                  valuePath="/saved-videos"
                   islight={islight}
                 >
                   Saved
@@ -101,4 +84,4 @@ class TopBar extends Component {
   }
 }
 
-export default TopBar
+export default withRouter(TopBar)

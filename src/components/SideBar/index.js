@@ -16,32 +16,22 @@ class SideBar extends Component {
     return (
       <ContextTheme.Consumer>
         {value => {
-          const {islight, changeSelectedLink, selectedLink} = value
+          const {islight} = value
+          const {match} = this.props
+          const {path} = match
 
-          const onClickSaved = () => {
-            changeSelectedLink('saved')
-          }
-          const onClickHome = () => {
-            changeSelectedLink('home')
-          }
-          const onClickTrending = () => {
-            changeSelectedLink('trending')
-          }
-          const onClickGaming = () => {
-            changeSelectedLink('gaming')
-          }
           return (
             <DivSidebar islight={islight}>
               <div className="links-container">
                 <Link
-                  onClick={onClickHome}
                   className="link-con"
                   style={{textDecoration: 'none'}}
                   to="/"
                 >
                   <FaHome className="link-logo" />
                   <LinkName
-                    selected={selectedLink}
+                    path={path}
+                    valuePath="/"
                     value="home"
                     islight={islight}
                   >
@@ -50,14 +40,14 @@ class SideBar extends Component {
                 </Link>
 
                 <Link
-                  onClick={onClickTrending}
                   className="link-con"
                   style={{textDecoration: 'none'}}
                   to="/trending"
                 >
                   <AiFillFire className="link-logo" />
                   <LinkName
-                    selected={selectedLink}
+                    path={path}
+                    valuePath="/trending"
                     value="trending"
                     islight={islight}
                   >
@@ -66,14 +56,14 @@ class SideBar extends Component {
                 </Link>
 
                 <Link
-                  onClick={onClickGaming}
                   className="link-con"
                   style={{textDecoration: 'none'}}
                   to="/gaming"
                 >
                   <IoLogoGameControllerB className="link-logo" />
                   <LinkName
-                    selected={selectedLink}
+                    path={path}
+                    valuePath="/gaming"
                     value="gaming"
                     islight={islight}
                   >
@@ -82,14 +72,14 @@ class SideBar extends Component {
                 </Link>
 
                 <Link
-                  onClick={onClickSaved}
                   className="link-con"
                   style={{textDecoration: 'none'}}
                   to="/saved-videos"
                 >
                   <FaSave className="link-logo" />
                   <LinkName
-                    selected={selectedLink}
+                    path={path}
+                    valuePath="/saved-videos"
                     value="saved"
                     islight={islight}
                   >

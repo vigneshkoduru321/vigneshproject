@@ -5,6 +5,8 @@ const ContextTheme = React.createContext({
   changeTheme: () => {},
   changeSelectedLink: () => {},
   selectedLink: 'home',
+  savedList: [],
+  changeSavedList: () => {},
 })
 
 export default ContextTheme

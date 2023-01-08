@@ -18,7 +18,7 @@ const TrendCard = props => {
             <Link
               style={{textDecoration: 'none'}}
               className="trend-card-con"
-              to="/trending"
+              to={`/videos/${id}`}
             >
               <div>
                 <img

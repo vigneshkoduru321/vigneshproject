@@ -13,7 +13,7 @@ const GameCard = props => {
         const {islight} = value
         return (
           <li className="game-card-con">
-            <Link style={{textDecoration: 'none'}} to="/gaming">
+            <Link style={{textDecoration: 'none'}} to={`/videos/${id}`}>
               <img
                 src={thumbnailUrl}
                 className="thumbnailUrl-game-card"

@@ -9,10 +9,11 @@ import Home from './components/Home'
 import Trending from './components/Trending'
 import Gaming from './components/Gaming'
 import Saved from './components/Saved'
+import VideoDetail from './components/VideoDetail'
 
 // Replace your code here
 class App extends Component {
-  state = {islight: true, selectedLink: 'home'}
+  state = {islight: true, selectedLink: 'home', savedList: []}
 
   changeTheme = () => {
     this.setState(prevState => ({islight: !prevState.islight}))
@@ -22,15 +23,25 @@ class App extends Component {
     this.setState({selectedLink: value})
   }
 
+  changeSavedList = value => {
+    const {savedList} = this.state
+    if (savedList.includes(value) === false) {
+      const updatedSavedList = [...savedList, value]
+      this.setState({savedList: updatedSavedList})
+    }
+  }
+
   render() {
-    const {islight, selectedLink} = this.state
+    const {islight, selectedLink, savedList} = this.state
     return (
       <ContextTheme.Provider
         value={{
           islight,
           selectedLink,
+          savedList,
           changeTheme: this.changeTheme,
           changeSelectedLink: this.changeSelectedLink,
+          changeSavedList: this.changeSavedList,
         }}
       >
         <Switch>
@@ -39,6 +50,7 @@ class App extends Component {
           <ProtectedRoute exact path="/trending" component={Trending} />
           <ProtectedRoute exact path="/gaming" component={Gaming} />
           <ProtectedRoute exact path="/saved-videos" component={Saved} />
+          <ProtectedRoute exact path="/videos/:id" component={VideoDetail} />
         </Switch>
       </ContextTheme.Provider>
     )
