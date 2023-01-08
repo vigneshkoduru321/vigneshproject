@@ -13,7 +13,7 @@ export const LinkName = styled.p`
   color: ${props => (props.islight ? 'black' : 'white')};
   font-weight: 550;
   font-size: 16px;
-  color: ${props => (props.path === props.valuePath ? 'red' : '#616e7c')};
+  color: ${props => (props.path === props.valuePath ? '#e00707' : '#616e7c')};
   opacity: ${props => (props.path === props.valuePath ? '1' : '0.5')};
 `
 export const ContactHead = styled.p`

@@ -58,7 +58,7 @@ class Trending extends Component {
 
   renderLoading = () => (
     <div id="loader" className="loader-con">
-      <div className="products-loader-container">
+      <div>
         <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
       </div>
     </div>

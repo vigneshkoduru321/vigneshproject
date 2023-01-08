@@ -11,3 +11,10 @@ export const ParaTrendCard = styled.p`
   font-family: 'Roboto';
   font-weight: 400;
 `
+
+export const ParaTrendCardP = styled.p`
+  color: ${props => (props.islight ? 'black' : 'white')};
+  font-family: 'Roboto';
+  font-weight: 400;
+  margin-left: 10px;
+`

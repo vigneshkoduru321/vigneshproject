@@ -3,7 +3,7 @@ import './index.css'
 import {Link} from 'react-router-dom'
 import ContextTheme from '../../context/ContextTheme'
 
-import {ParaTrendCard, TitleTrendCard} from './styledComponent'
+import {ParaTrendCard, TitleTrendCard, ParaTrendCardP} from './styledComponent'
 
 const TrendCard = props => {
   const {details} = props
@@ -14,37 +14,23 @@ const TrendCard = props => {
       {value => {
         const {islight} = value
         return (
-          <li>
-            <Link
-              style={{textDecoration: 'none'}}
-              className="trend-card-con"
-              to={`/videos/${id}`}
-            >
-              <div>
-                <img
-                  src={thumbnailUrl}
-                  alt=""
-                  className="trending-thumbnailUrl-img"
-                />
-              </div>
-              <div className="content-trends-con">
-                <TitleTrendCard className="title-trends" islight={islight}>
-                  {title}
-                </TitleTrendCard>
-                <ParaTrendCard className="para-trends" islight={islight}>
-                  {name}
-                </ParaTrendCard>
-                <div className="views-con-trends">
-                  <ParaTrendCard className="para-trends" islight={islight}>
+          <Link style={{textDecoration: 'none'}} to={`/videos/${id}`}>
+            <div className="trends-containers">
+              <img src={thumbnailUrl} alt="" className="trends-img" />
+              <div className="trends-content-container">
+                <TitleTrendCard islight={islight}>{title}</TitleTrendCard>
+                <ParaTrendCard islight={islight}>{name}</ParaTrendCard>
+                <div className="views-count">
+                  <ParaTrendCard islight={islight}>
                     {viewCount} Views
                   </ParaTrendCard>
-                  <ParaTrendCard className="para-trends" islight={islight}>
+                  <ParaTrendCardP islight={islight}>
                     {publishedAt}
-                  </ParaTrendCard>
+                  </ParaTrendCardP>
                 </div>
               </div>
-            </Link>
-          </li>
+            </div>
+          </Link>
         )
       }}
     </ContextTheme.Consumer>

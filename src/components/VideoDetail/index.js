@@ -1,7 +1,7 @@
 import './index.css'
 
 import {BiLike, BiDislike} from 'react-icons/bi'
-import {GiSaveArrow} from 'react-icons/gi'
+import {IoIosSave} from 'react-icons/io'
 import ReactPlayer from 'react-player'
 
 import Cookies from 'js-cookie'
@@ -175,7 +175,7 @@ class VideoDetail extends Component {
                           onClick={onClickSave}
                           selectedReaction={selectedReaction}
                         >
-                          <GiSaveArrow />
+                          <IoIosSave />
                           Save
                         </ButtonSave>
                       </div>

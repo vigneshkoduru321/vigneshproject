@@ -1,9 +1,3 @@
-.sidebar-content-container {
-  display: flex;
-  flex-direction: row;
-  height: 580px;
-  width: 100%;
-}
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
@@ -23,6 +17,12 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+.sidebar-content-container {
+  display: flex;
+  flex-direction: row;
+  height: 580px;
+  width: 100%;
 }
 .search-input-container {
   display: flex;
@@ -101,6 +101,7 @@
 }
 .render-item-con {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;

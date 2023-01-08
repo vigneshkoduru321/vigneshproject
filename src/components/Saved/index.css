@@ -12,3 +12,8 @@
 .saved-containers {
   width: 100%;
 }
+@media (max-width: 576px) {
+  .no-saved-img {
+    height: 200px;
+  }
+}

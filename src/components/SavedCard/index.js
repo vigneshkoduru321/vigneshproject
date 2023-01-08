@@ -87,16 +87,12 @@ class SavedCard extends Component {
           const {islight} = value
           return (
             <Link style={{textDecoration: 'none'}} to={`/videos/${id}`}>
-              <div className="saved-card">
-                <img
-                  src={thumbnailUrl}
-                  alt=""
-                  className="thumbnailUrl-saved-card"
-                />
+              <div className="save-main-container">
+                <img src={thumbnailUrl} alt="" className="thumbnailUrl-saved" />
                 <div className="saved-content">
                   <TitleSaved islight={islight}>{title}</TitleSaved>
                   <NameSaved islight={islight}>{name}</NameSaved>
-                  <div className="views-saved">
+                  <div className="view-con">
                     <ViewsSaved islight={islight}>{viewCount} Views</ViewsSaved>
                     <PublishedSaved islight={islight}>
                       {publishedAt}

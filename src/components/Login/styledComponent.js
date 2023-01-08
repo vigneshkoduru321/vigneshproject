@@ -11,8 +11,9 @@ export const DivLoginForm = styled.form`
   align-items: center;
   border-color: ${props => (props.islight ? '#1e293b' : 'white')};
   border-style: solid;
-  border-width: 1px;
+  border-width: 0px;
   font-family: 'Roboto';
+  box-shadow: 0.5px 0.5px 10px ${props => (props.islight ? 'black' : 'white')};
 `
 
 export const Label = styled.p`

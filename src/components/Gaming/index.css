@@ -8,7 +8,7 @@
 }
 
 .head-logo {
-  color: red;
+  color: #eb1515;
   font-size: 40px;
   margin-right: 20px;
 }
@@ -40,6 +40,5 @@
     display: none;
   }
   .videos-cards {
-    margin-right: 40px;
   }
 }
