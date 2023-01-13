@@ -106,7 +106,9 @@ class SideBar extends Component {
                     className="logo"
                   />
                 </div>
-                <ContactPara islight={islight}>Enjoy!!</ContactPara>
+                <ContactPara islight={islight}>
+                  Enjoy! Now to see your channels and recommendations.
+                </ContactPara>
               </div>
             </DivSidebar>
           )

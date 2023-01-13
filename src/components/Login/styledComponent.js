@@ -13,6 +13,7 @@ export const DivLoginForm = styled.form`
   border-style: solid;
   border-width: 0px;
   font-family: 'Roboto';
+  font-weight: 600;
   box-shadow: 0.5px 0.5px 10px ${props => (props.islight ? 'black' : 'white')};
 `
 
@@ -24,5 +25,5 @@ export const LabelShow = styled.label`
   color: ${props => (props.islight ? '#1e293b' : 'white')};
   font-family: 'Roboto';
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 450;
 `

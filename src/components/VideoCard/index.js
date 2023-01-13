@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 
 import './index.css'
 
-import {Title, Name} from './styledComponent'
+import {Title, Views, Pub} from './styledComponent'
 import ContextTheme from '../../context/ContextTheme'
 
 const VideoCard = props => {
@@ -22,10 +22,10 @@ const VideoCard = props => {
 
                 <div className="content-card-con">
                   <Title islight={islight}>{title}</Title>
-                  <Name islight={islight}>{name}</Name>
+                  <Pub islight={islight}>{name}</Pub>
                   <div className="views-con">
-                    <Name islight={islight}>{viewCount} Views</Name>
-                    <Name islight={islight}>{publishedAt}</Name>
+                    <Views islight={islight}>{viewCount} Views</Views>
+                    <Pub islight={islight}>{publishedAt}</Pub>
                   </div>
                 </div>
               </div>

@@ -6,7 +6,7 @@ export const DivMainTrend = styled.div`
   width: 100vw;
 `
 export const HeadTrend = styled.h1`
-  color: ${props => (props.islight ? 'black' : 'white')};
+  color: ${props => (props.islight ? '#1E293B' : 'white')};
 `
 export const HeadContainer = styled.div`
   background-color: ${props => (props.islight ? 'white' : 'black')};

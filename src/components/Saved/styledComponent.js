@@ -6,7 +6,7 @@ export const DivMainSaved = styled.div`
   width: 100vw;
 `
 export const HeadTrend = styled.h1`
-  color: ${props => (props.islight ? 'black' : 'white')};
+  color: ${props => (props.islight ? '#1E293B' : 'white')};
 `
 export const HeadContainer = styled.div`
   background-color: ${props => (props.islight ? 'white' : 'black')};
@@ -26,14 +26,15 @@ export const SavedListCon = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  font-family: 'Roboto';
 `
 export const TitleNoSaved = styled.h1`
-  color: ${props => (props.islight ? 'black' : 'white')};
+  color: ${props => (props.islight ? '#334155' : 'white')};
   font-size: 25px;
   font-weight: 600;
 `
 export const ParaNoSaved = styled.h1`
-  color: ${props => (props.islight ? 'black' : 'white')};
+  color: ${props => (props.islight ? '#475569' : 'white')};
   font-size: 15px;
   font-weight: 400;
 `

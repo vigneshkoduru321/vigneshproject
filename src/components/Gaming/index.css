@@ -34,11 +34,11 @@
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 @media (max-width: 576px) {
   .head-container {
     display: none;
-  }
-  .videos-cards {
   }
 }

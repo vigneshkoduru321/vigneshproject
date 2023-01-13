@@ -14,10 +14,16 @@ import SideBar from '../SideBar'
 import TopBar from '../TopBar'
 import VideoCard from '../VideoCard'
 
-import {DivMainHome} from './styledComponent'
+import {DivMainHome, ParaSearch} from './styledComponent'
 
 class Home extends Component {
-  state = {showBanner: true, dataState: 'initial', Data: [], searchText: ''}
+  state = {
+    showBanner: true,
+    dataState: 'initial',
+    Data: [],
+    searchText: '',
+    isemptyList: 'false',
+  }
 
   componentDidMount() {
     this.getVideosData()
@@ -38,6 +44,11 @@ class Home extends Component {
     const fetchedData = await response.json()
     if (response.ok) {
       const {videos} = fetchedData
+      if (videos.length === 0) {
+        this.setState({isemptyList: true})
+      } else {
+        this.setState({isemptyList: false})
+      }
       const updatedData = videos.map(each => ({
         channel: {
           name: each.channel.name,
@@ -70,19 +81,32 @@ class Home extends Component {
   renderLoading = () => (
     <div id="loader" className="loader-con">
       <div className="products-loader-container">
-        <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
+        <Loader type="ThreeDots" color="red" height="50" width="50" />
       </div>
     </div>
   )
 
   renderSuccess = () => {
-    const {Data} = this.state
+    const {Data, isemptyList} = this.state
     return (
-      <ul className="videos-container">
-        {Data.map(each => (
-          <VideoCard details={each} key={each.id} />
-        ))}
-      </ul>
+      <div>
+        {isemptyList ? (
+          <div className="no-video-con">
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/nxt-watch-no-search-results-img.png"
+              alt=""
+              className="no-videos"
+            />
+            <ParaSearch>Your search didn't find any matches.</ParaSearch>
+          </div>
+        ) : (
+          <ul className="videos-container">
+            {Data.map(each => (
+              <VideoCard details={each} key={each.id} />
+            ))}
+          </ul>
+        )}
+      </div>
     )
   }
 
@@ -107,7 +131,7 @@ class Home extends Component {
   }
 
   render() {
-    const {showBanner} = this.state
+    const {showBanner, isemptyList} = this.state
     return (
       <ContextTheme.Consumer>
         {value => {

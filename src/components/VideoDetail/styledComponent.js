@@ -4,6 +4,7 @@ export const DivVideoMain = styled.div`
   background-color: ${props => (props.islight ? 'white' : 'black')};
   height: 100vh;
   width: 100vw;
+  font-family: 'Roboto';
 `
 
 export const VideoContainer = styled.div`
@@ -24,21 +25,24 @@ export const VideoContainer = styled.div`
   }
 `
 
-export const TitleVideo = styled.div`
-  color: ${props => (props.islight ? 'black' : 'white')};
+export const TitleVideo = styled.p`
+  color: ${props => (props.islight ? '#1E293B;' : 'white')};
   font-weight: 600;
-  font-size: 20px;
-  margin-bottom: 30px;
+  font-size: 25px;
+  margin: 0px;
+  margin-bottom: 10px;
+
   @media (max-width: 576px) {
     font-size: 22px;
     margin-bottom: 10px;
   }
 `
 
-export const Para = styled.div`
-  color: ${props => (props.islight ? 'black' : 'white')};
+export const Para = styled.p`
+  color: ${props => (props.islight ? '#475569' : 'white')};
   font-weight: 400;
   font-size: 15px;
+  margin: 0px;
   @media (max-width: 576px) {
     font-size: 18px;
     font-weight: 0;
@@ -46,10 +50,12 @@ export const Para = styled.div`
   }
 `
 
-export const ParaView = styled.div`
-  color: ${props => (props.islight ? 'black' : 'white')};
+export const ParaView = styled.p`
+  color: ${props => (props.islight ? '#475569' : 'white')};
   font-weight: 400;
   font-size: 15px;
+  margin: 0px;
+  margin-right: 10px;
   @media (max-width: 576px) {
     font-size: 18px;
     font-weight: 0;
@@ -99,26 +105,28 @@ export const Hr = styled.hr`
   }
 `
 
-export const Name = styled.div`
-  color: ${props => (props.islight ? 'black' : 'white')};
+export const Name = styled.p`
+  color: ${props => (props.islight ? '#475569;' : 'white')};
   font-weight: 400;
   font-size: 15px;
+  margin: 0px;
   @media (max-width: 576px) {
     font-size: 14px;
   }
 `
 
 export const Subscribers = styled.p`
-  color: ${props => (props.islight ? 'black' : 'white')};
+  color: ${props => (props.islight ? '#475569;' : 'white')};
   font-weight: 400;
   font-size: 15px;
+
   @media (max-width: 576px) {
     font-size: 1px;
   }
 `
 export const Description = styled.p`
-  color: ${props => (props.islight ? 'black' : 'white')};
-  font-weight: 600;
+  color: ${props => (props.islight ? '#475569;' : 'white')};
+  font-weight: 430;
   font-size: 15px;
   @media (max-width: 576px) {
     font-size: 14px;

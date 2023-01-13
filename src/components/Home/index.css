@@ -41,6 +41,7 @@
   border-color: #1e293b;
   color: #1e293b;
   font-size: 15px;
+  outline: none;
 }
 .search-button {
   background-color: transparent;
@@ -49,6 +50,16 @@
   height: 30px;
   border-color: #1e293b;
   color: red;
+}
+
+.no-video-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.no-videos {
+  height: 250px;
 }
 .banner-container {
   background-image: url('https://res.cloudinary.com/dzn2lfoqa/image/upload/v1673037607/youtube-wallpaper-6720462__340_d10fiq.webp');
@@ -122,7 +133,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
+  padding: 0px;
+  margin: 0px;
   width: 100%;
 }
 .close {

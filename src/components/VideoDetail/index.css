@@ -19,8 +19,11 @@
 }
 .like {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin-right: 50px;
+
+  width: 250px;
 }
 .views {
   display: flex;
@@ -43,6 +46,7 @@
 }
 .channel-img {
   height: 40px;
+  margin-right: 10px;
 }
 .name-content {
   display: flex;

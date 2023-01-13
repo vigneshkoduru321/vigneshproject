@@ -106,7 +106,6 @@ class VideoDetail extends Component {
       subscriberCount,
       isSaved,
     } = this.state
-    console.log(isSaved)
     const {
       description,
       id,

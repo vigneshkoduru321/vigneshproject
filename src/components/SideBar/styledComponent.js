@@ -18,11 +18,11 @@ export const LinkName = styled.p`
 `
 export const ContactHead = styled.p`
   color: ${props => (props.islight ? '#1e293b' : '  #d7dfe9')};
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
 `
 export const ContactPara = styled.p`
-  color: ${props => (props.islight ? 'black' : '#606060')};
-  font-weight: 600px;
-  font-size: 15px;
+  color: ${props => (props.islight ? '#1e293b' : '#606060')};
+  font-weight: 400px;
+  font-size: 12px;
 `

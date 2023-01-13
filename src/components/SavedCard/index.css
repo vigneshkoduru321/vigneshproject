@@ -8,6 +8,7 @@
 .thumbnailUrl-saved {
   height: 200px;
   width: 300px;
+  border-radius: 10px;
 }
 .view-con {
   display: flex;

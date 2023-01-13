@@ -11,7 +11,9 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-left: 20px;
+  margin-left: 25px;
+  margin-top: 0px;
+  height: 150px;
 }
 .views-count {
   display: flex;
@@ -33,5 +35,6 @@
   }
   .trends-img {
     width: 90%;
+    margin-left: 25px;
   }
 }

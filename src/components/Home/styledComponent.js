@@ -5,4 +5,9 @@ export const DivMainHome = styled.div`
   height: 100vh;
   width: 100vw;
 `
-export default DivMainHome
+export const ParaSearch = styled.p`
+  color: #475569;
+  font-family: 'Roboto';
+  font-weight: '450px';
+  font-size: 18px;
+`

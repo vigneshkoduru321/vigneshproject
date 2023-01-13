@@ -43,6 +43,7 @@
   border-width: 1px;
   border-style: solid;
   font-family: 'Roboto';
+  outline: none;
 }
 .login-button {
   border-width: 0px;
