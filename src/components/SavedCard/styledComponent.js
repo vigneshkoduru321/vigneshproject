@@ -5,6 +5,7 @@ export const TitleSaved = styled.p`
   font-size: 20px;
   font-weight: 600;
   margin: 0px;
+  padding: 0px;
   margin-top: 10px;
   @media (max-width: 576px) {
     font-size: 17px;

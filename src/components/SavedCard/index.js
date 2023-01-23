@@ -72,7 +72,7 @@ class SavedCard extends Component {
   renderLoading = () => (
     <div id="loader" className="loader-con-save">
       <div className="products-loader-container">
-        <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
+        <Loader type="ThreeDots" color="red" height="50" width="50" />
       </div>
     </div>
   )

@@ -5,6 +5,13 @@
   align-items: flex-start;
   margin: 10px;
 }
+.loader-con-save {
+  height: 400px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .thumbnailUrl-saved {
   height: 200px;
   width: 300px;

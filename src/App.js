@@ -10,6 +10,7 @@ import Trending from './components/Trending'
 import Gaming from './components/Gaming'
 import Saved from './components/Saved'
 import VideoDetail from './components/VideoDetail'
+import NotFound from './components/NotFound'
 
 // Replace your code here
 class App extends Component {
@@ -51,6 +52,7 @@ class App extends Component {
           <ProtectedRoute exact path="/gaming" component={Gaming} />
           <ProtectedRoute exact path="/saved-videos" component={Saved} />
           <ProtectedRoute exact path="/videos/:id" component={VideoDetail} />
+          <NotFound component={NotFound} />
         </Switch>
       </ContextTheme.Provider>
     )

@@ -25,7 +25,7 @@ li {
   font-size: 30px;
 }
 .profile {
-  height: 30px;
+  height: 35px;
 }
 .logout-button {
   height: 30px;
@@ -36,6 +36,95 @@ li {
   border-color: #3b82f6;
   color: #3b82f6;
   background-color: transparent;
+}
+.profile-container {
+  background-color: grey;
+  height: 480px;
+  width: 400px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.profile-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.profile-name {
+  margin-left: 20px;
+  color: navy;
+  font-weight: 500;
+}
+.profile-gmail {
+  font-weight: 400;
+  color: #334155;
+  padding: 0px;
+  margin-left: 50px;
+}
+.pa {
+  margin: 0px;
+  padding: 0px;
+}
+.span-profile {
+  color: navy;
+  font-weight: 600;
+}
+.div-con-pro {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px;
+}
+.p-logo {
+  font-size: 20px;
+  margin-right: 20px;
+  color: black;
+}
+.logout-button-p {
+  background-color: transparent;
+  border-width: 0px;
+}
+.trigger-button {
+  background-color: transparent;
+  border-width: 0px;
+  margin-left: 20px;
+}
+.close-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logout-container {
+  background-color: grey;
+  height: 200px;
+  width: 300px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logout-para {
+  font-weight: 450;
+  margin-bottom: 30px;
+}
+.logout-cancel {
+  height: 30px;
+  width: 70px;
+  color: #3b82f6;
+  border-color: #3b82f6;
+  background-color: transparent;
+  border-style: solid;
+  margin-right: 10px;
+}
+.logout {
+  height: 30px;
+  width: 70px;
+  color: white;
+  border-color: #3b82f6;
+  background-color: #3b82f6;
+  border-style: solid;
 }
 @media (max-width: 576px) {
   .website-logo-header {
@@ -56,4 +145,15 @@ li {
   .log-out-container {
     width: 170px;
   }
+  .profile-container {
+    background-color: grey;
+    height: 450px;
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
+.profile-button {
+  background-color: transparent;
+  border-width: 0px;
 }
